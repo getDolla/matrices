@@ -56,4 +56,4 @@ for i in range(0, 3*YRES/4, 2):
 draw_lines( matrix, screen, color)
 
 display(screen)
-save_extension(screen, 'img.png')
+#save_extension(screen, 'img.png')
