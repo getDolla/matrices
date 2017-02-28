@@ -28,12 +28,24 @@ def scalar_mult( matrix, s ):
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
     temp = []
-    for c in range(len(m1)):
+    r = len(m2)
+    c = len(m1)
+
+    for m in range(c):
         temp.append([])
-        for r in range(len(m2[c])):
+        for n in range(c):
+            s = 0
+            for o in range(r):
+                s += m1[m][o] * m2[o][n]
+            temp[m].append(s)
 
+    for x in range(len(temp)):
+        m2[x] = temp[x]
 
+    while (len(m2) > len(temp)):
+        m2.pop()
 
+    #print_matrix(m2)
 
 def new_matrix(rows = 4, cols = 4):
     m = []
