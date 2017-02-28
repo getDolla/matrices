@@ -5,7 +5,7 @@ def print_matrix( matrix ):
     for r in matrix:
         s = ""
         for c in  r:
-            s += str(c) + " "
+            s += str(c) + "  "
         print s
 
 def ident( matrix ):
@@ -33,7 +33,7 @@ def matrix_mult( m1, m2 ):
 
     for m in range(c):
         temp.append([])
-        for n in range(c):
+        for n in range(len(m2[0])):
             s = 0
             for o in range(r):
                 s += m1[m][o] * m2[o][n]
